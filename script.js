@@ -49,7 +49,7 @@ var listArray = [
     },
 ];
 function filterActiveUsers(e) {
-    var filteredArray = e.filter(function (item) { return item.isActive.valueOf = true; });
+    var filteredArray = e.filter(function (item) { return item.isActive === true; });
     return filteredArray;
 }
 ;

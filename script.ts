@@ -60,8 +60,8 @@ let listArray = [
   },
 ];
 
-function filterActiveUsers(e: any){
-  let filteredArray = e.filter((item: any) => item.isActive.valueOf = true);
+function filterActiveUsers(e: User[]){
+  let filteredArray = e.filter((item: User) => item.isActive === true);
   return filteredArray;
 };
 
