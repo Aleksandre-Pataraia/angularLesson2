@@ -6,7 +6,7 @@ interface User {
   isActive: boolean;
 }
 
-let userAlice: User = {
+let uAlice: User = {
   id: 42,
   name: "Alice",
   email: "alice@email.com",
@@ -14,13 +14,11 @@ let userAlice: User = {
   isActive: true,
 }
 
-function formatUser(user: User): string {
-  return `[${user.id}] ${user.name} (${user.email}) ${"-"} ${"age"} ${user.age} ${user.isActive}`;
+function formatUser(e: User): string {
+  return `[${e.id}] ${e.name} (${e.email}) ${"-"} ${"age"} ${e.age} ${e.isActive}`;
 }
 
-// let formatUser(userAlice)
-
-let array = [
+let listArray = [
   {
     id: 201,
     name: "George",
@@ -58,9 +56,10 @@ let array = [
   },
 ];
 
+function filterActiveUsers(e: any){
+  let filteredArray = e.filter((item: User) => item.isActive = true);
+  return filteredArray;
+};
 
-// function filterActiveUsers([]){
-//   if ([].isActive == true){
-
-//   }
-// }
+let seeFilteredArray = filterActiveUsers(listArray);
+console.log(seeFilteredArray);

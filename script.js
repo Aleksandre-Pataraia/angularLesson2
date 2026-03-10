@@ -1,15 +1,14 @@
-var userAlice = {
+var uAlice = {
     id: 42,
     name: "Alice",
     email: "alice@email.com",
     age: 25,
     isActive: true,
 };
-function formatUser(user) {
-    return "[".concat(user.id, "] ").concat(user.name, " (").concat(user.email, ") ").concat("-", " ").concat("age", " ").concat(user.age, " ").concat(user.isActive);
+function formatUser(e) {
+    return "[".concat(e.id, "] ").concat(e.name, " (").concat(e.email, ") ").concat("-", " ").concat("age", " ").concat(e.age, " ").concat(e.isActive);
 }
-// let formatUser(userAlice)
-var array = [
+var listArray = [
     {
         id: 201,
         name: "George",
@@ -46,7 +45,10 @@ var array = [
         isActive: false,
     },
 ];
-// function filterActiveUsers([]){
-//   if ([].isActive == true){
-//   }
-// }
+function filterActiveUsers(e) {
+    var filteredArray = e.filter(function (item) { return item.isActive = true; });
+    return filteredArray;
+}
+;
+var seeFilteredArray = filterActiveUsers(listArray);
+console.log(seeFilteredArray);
