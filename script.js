@@ -8,6 +8,9 @@ var uAlice = {
 function formatUser(e) {
     return "[".concat(e.id, "] ").concat(e.name, " (").concat(e.email, ") ").concat("-", " ").concat("age", " ").concat(e.age, " ").concat(e.isActive);
 }
+;
+var showuAlice = formatUser(uAlice);
+console.log(showuAlice);
 var listArray = [
     {
         id: 201,
@@ -46,7 +49,7 @@ var listArray = [
     },
 ];
 function filterActiveUsers(e) {
-    var filteredArray = e.filter(function (item) { return item.isActive = true; });
+    var filteredArray = e.filter(function (item) { return item.isActive.valueOf = true; });
     return filteredArray;
 }
 ;

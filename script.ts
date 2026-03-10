@@ -16,7 +16,11 @@ let uAlice: User = {
 
 function formatUser(e: User): string {
   return `[${e.id}] ${e.name} (${e.email}) ${"-"} ${"age"} ${e.age} ${e.isActive}`;
-}
+};
+
+let showuAlice = formatUser(uAlice);
+console.log(showuAlice);
+
 
 let listArray = [
   {
@@ -57,7 +61,7 @@ let listArray = [
 ];
 
 function filterActiveUsers(e: any){
-  let filteredArray = e.filter((item: User) => item.isActive = true);
+  let filteredArray = e.filter((item: any) => item.isActive.valueOf = true);
   return filteredArray;
 };
 
